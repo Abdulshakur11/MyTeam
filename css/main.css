@@ -934,10 +934,6 @@ img {
     padding-top: 64px;
   }
 
-  .team-section {
-    height: 36%;
-  }
-
   .team__left-line {
     margin-left: 84px;
   }
@@ -1123,10 +1119,6 @@ img {
 }
 
 @media only screen and (max-width: 576px) {
-  .info-section {
-    height: 50%;
-  }
-
   .info__title {
     width: 320px;
   }
@@ -1436,7 +1428,7 @@ img {
 }
 @media only screen and (max-width: 576px) {
   .footer-section {
-    margin-top: 450px;
+    margin-top: -15px;
   }
 }
 @media only screen and (max-width: 576px) {
