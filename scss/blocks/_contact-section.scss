@@ -1,0 +1,90 @@
+// CONTACT SRCTION STYLES 
+
+.contact-section {
+  background-color: #F67E7E;
+  position: relative;
+  overflow: hidden;
+  
+
+  &::before {
+    position: absolute;
+    width: 200px;
+    height: 244px;
+    content: "";
+    left: 0;
+    bottom: -100px;
+    background-image: url("../../imges/contact-oval.png");
+  }
+
+  @include breakpoint-down (1440px) {
+    &::before {
+      bottom: -132px;
+    }
+  }
+
+}
+
+.contact__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+  padding-bottom: 76px;
+
+  @include breakpoint-down (1440px) {
+    justify-content: center;
+  }
+
+  @include breakpoint-down (576px) {
+    flex-direction: column;
+  }
+}
+
+.contact__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #012F34;
+  margin: 0;
+
+  @include breakpoint-down (1440px) {
+    width: 336px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include breakpoint-down (767px) {
+    width: 280px;
+  }
+  @include breakpoint-down (576px) {
+    text-align: center;
+    margin-bottom: 24px;
+  } 
+}
+
+.contact__button {
+  @include site-button;
+  background-color: #F67E7E;
+  color: #012F34;
+  border: 2px solid #012F34;
+  margin-left: 260px;
+  transition: all 0.2s ease;
+
+  @include breakpoint-down (1440px) {
+    margin-left: 84px;
+  }
+
+  @include breakpoint-down (767px) {
+    margin-left: 0;
+  }
+}
+
+.contact__button:hover {
+  color: #fff;
+  background-color: #012F34;
+}
+
+.contact__button:active {
+  border: 2px solid #fff;
+  color: #F67E7E;
+}

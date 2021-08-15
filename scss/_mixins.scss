@@ -1,0 +1,55 @@
+// LIST UNSTYLED
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin item-unstyled {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+// LOGO UNSTYLED
+@mixin site-logo {
+  .site-logo {
+    display: block;
+    width: 160px;
+    height: 40px;
+  }
+}
+
+// SITE LINE
+
+@mixin line {
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin: 0;
+}
+
+// SITE BUTTON 
+@mixin site-button {
+  width: 153px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+  border-radius: 24px;
+  padding-top: 9px;
+  padding-bottom: 7px;
+}
+
+// RESPONSIVE
+
+@mixin breakpoint-down ($screen-width) {
+    @media only screen and (max-width: $screen-width) {
+      @content
+    }
+}

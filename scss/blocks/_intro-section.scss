@@ -1,0 +1,149 @@
+// INTRO SECTION STYLES
+
+.intro-section {
+  background-color: #014E56;
+  overflow: hidden;
+  height: 80vh;
+  position: relative;
+}
+
+.intro__bgimg::before {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  content: " ";
+  top: 123px;
+  left: -100px;
+  background-image: url("../../imges/intro-oval.png");
+}
+
+.intro__bgimg-bottom {
+  position: absolute;
+  display: block;
+  width: 358px;
+  height: 200px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  right: 200px;
+  margin-top: 145px;
+  bottom: -100px;
+  background-image: url("../../imges/duble-oval.png");
+}
+
+
+.intro__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 133px;
+  // padding-bottom: 250px;
+}
+
+.intro__title {
+  width: 532px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.intro__title-part {
+  color: #F67E7E;
+}
+
+.intro__wrapper-right {
+  width: 445px;
+}
+
+.wrapper-right__line {
+  @include line;
+  background-color: #79C8C7;
+}
+
+.wrapper-right__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin: 0;
+  margin-top: 79px;
+  // padding-bottom: 155px;
+}
+
+@include breakpoint-down (1320px) {
+  .intro__bgimg::before {
+    display: none;
+  }
+}
+
+@include breakpoint-down (1000px) {
+  .intro-section {
+    height: 120vh;
+  }
+
+  .intro__wrapper {
+    flex-direction: column;
+  }
+
+  .intro__title {
+    width: 100%;
+    font-size: 64px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  .wrapper-right__line {
+    display: none;
+  }
+
+  .wrapper-right__text {
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+}
+
+@include breakpoint-down (576px) {
+
+  .intro__bgimg-bottom {
+    bottom: -100px;
+    // margin-right: 104px;
+    transform: translateX(193px);
+  }
+
+  .intro__title {
+    width: 300px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .wrapper-right__text {
+    width: 300px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint-down (320px) {
+  .intro__bgimg-bottom {
+    transform: translateX(210px);
+  }
+
+} 
