@@ -1,0 +1,283 @@
+// CONTACT US SECTION STYLES
+
+.contact-us-section {
+  position: relative;
+  overflow: hidden;
+  background-color: $midnight-green;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/director-bgimg.png");
+    top: 112px;
+    left: -100px;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    width: 225px;
+    height: 200px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/contact.bg.png");
+    bottom: 0;
+    right: -125px;
+  }
+
+
+}
+
+.contact-us__wrappewr {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 124px;
+  padding-bottom: 124px;
+}
+
+// .contactus-wrappewr__left {
+//   // width: 540px;
+// }
+
+.contactus-left__title {
+  width: 350px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100px;
+  color: $main-white;
+  margin: 0;
+}
+
+.contactus-left__subtitle {
+  width: 540px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  color: $light-coral;
+  margin: 0;
+}
+
+.contactus-left__list {
+  @include list-unstyled;
+  margin-top: 62px;
+}
+
+.contactus-left__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 52px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/boy-imag.svg");
+    left: 0;
+  }
+}
+
+.contactus-left__item:nth-child(1) {
+  margin-top: 0;
+}
+
+.contactus-left__item:nth-child(2) {
+  &::before {
+    background-image: url("/imges/setting-imag.svg");
+  }
+}
+
+.contactus-left__item:nth-child(3) {
+  &::before {
+    background-image: url("/imges/shape.svg");
+  }
+}
+
+.contactus-left__item-text {
+  width: 445px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: $main-white;
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 100px;
+}
+
+
+// .contactus-wrappewr__right {
+//   width: 540px;
+// }
+
+.contactus-right__input-lable {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: $main-white;
+}
+
+.contactus-right__input-name {
+  width: 445px;
+  height: 25px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: $main-white;
+  margin-left: 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 24px;
+}
+
+.contactus-right__input-line {
+  display: block;
+  width: 540px;
+  height: 1px;
+  background-color: $main-white;
+  margin-top: 16px;
+}
+
+.contactus-right__input-message {
+  width: 520px;
+  resize: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: $main-white;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+.contactus-right__button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: $deep-jungle-green;
+  cursor: pointer;
+  margin-top: 24px;
+  padding: 9px 32px;
+  background-color: $main-white;
+  border: 2px solid $main-white;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+
+.contactus-right__button:hover {
+  background-color: $rapture-blue;
+}
+
+.contactus-right__button:active {
+  background-color: $main-white;
+  opacity: 0.3;
+}
+
+
+// RESPONSIVE
+
+@include breakpoint-down (1340px) {
+  .contact-us__wrappewr {
+    width: 540px;
+    flex-direction: column;
+    padding-top: 122px;
+    padding-bottom: 122px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactus-left__title {
+    width: 248px;
+    line-height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactus-left__subtitle {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+
+  .contactus-left__list {
+    margin-top: 46px;
+  }
+}
+
+@include breakpoint-down (767px) {
+  .contact-us__wrappewr {
+    width: 300px;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 88px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactus-left__title {
+    width: 157px;
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactus-left__subtitle {
+    width: 200px;
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactus-left__list {
+    margin-top: 48px;
+  }
+
+  .contactus-left__item-text {
+    width: 232px;
+  }
+
+  .contactus-right__input-name {
+    width: 260px;
+  }
+
+  .contactus-right__input-line {
+    width: 300px;
+  }
+  
+  .contactus-right__input-message {
+    width: 260px;
+  }
+
+  .contact-us-section {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      bottom: -90px;
+    }
+  }
+
+}
