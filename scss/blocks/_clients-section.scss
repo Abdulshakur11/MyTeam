@@ -1,0 +1,141 @@
+// CLIENTS SECTION STYLES
+
+.clients-section {
+  position: relative;
+  overflow: hidden;
+  background-color: $sacramento-state-green;
+  
+  &::before {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/clients-bg.png");
+    top: 0;
+    left: 0;
+  }
+}
+
+.clients__wrapper {
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.clients__title {
+  width: 920px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: $main-white;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients__list {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.clients__item~.clients__item {
+  margin-left: 80px;
+}
+
+// .clients__item-link {}
+.clients__item-link-img {
+  transition: all 0.3s ease;
+}
+
+.clients__item-link-img:hover {
+  transform: scale(1.10);
+  filter: drop-shadow(5px 2px 0.35rem crimson);
+}
+
+.clients__item-link-img:active {
+  transform: scale(0.90);
+}
+
+// responsive
+
+@include breakpoint-down (1130px) {
+
+  .clients-section {
+    &::before {
+      top: -100px;
+    }
+  }
+
+  .clients__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .clients__title {
+    width: 457px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .clients__list {
+    width: 689px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clients__item~.clients__item {
+    margin-left: 50px;
+  }
+
+  .clients__item-link-img {
+    transition: all 0.2s ease;
+  }
+
+}
+
+@include breakpoint-down (730px) {
+  .clients-section {
+    &::before {
+      top: -100px;
+      left: -100px;
+    }
+
+  }
+  .clients__wrapper {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .clients__title {
+    width: 300px;
+  }
+
+  .clients__list {
+    width: 170px;
+    flex-direction: column;
+  }
+
+  .clients__item~.clients__item {
+    margin-left: 0px;
+  }
+
+  .clients__item {
+    margin-top: 56px;
+  }
+
+  .clients__item:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+@include breakpoint-down (375px) {
+  .clients__title {
+    margin-top: 20px;
+  }
+} 

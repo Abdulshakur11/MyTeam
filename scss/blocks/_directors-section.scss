@@ -1,0 +1,336 @@
+// DIRECTORS SECTION STYLE
+
+.directors-section {
+  background-color: $deep-jungle-green;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/director-bgimg.png");
+    top: 0;
+    left: -100px;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    width: 147px;
+    height: 100px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/square-info.svg");
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+.director__wrapper {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.director__title {
+  width: 920px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: $main-white;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.director__list {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.director__item~.director__item {
+  margin-left: 30px;
+}
+
+.director__item:nth-child(4) {
+  margin-left: 0;
+}
+
+
+.director__item {
+  width: 350px;
+  height: 253px;
+  position: relative;
+  background-color: $sacramento-state-green;
+  margin-top: 64px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url("/imges/Nikita.png");
+    left: 127px;
+    top: 32px;
+  }
+}
+
+.director__item:nth-child(2) {
+  &::before {
+    background-image: url("/imges/cristian.png");
+  }
+}
+
+.director__item:nth-child(3) {
+  &::before {
+    background-image: url("/imges/Cruz.png");
+  }
+}
+
+.director__item:nth-child(4) {
+  margin-top: 76px;
+
+  &::before {
+    background-image: url("/imges/drake.png");
+  }
+}
+
+.director__item:nth-child(5) {
+  margin-top: 76px;
+
+  &::before {
+    background-image: url("/imges/griffin.png");
+  }
+}
+
+.director__item:nth-child(6) {
+  margin-top: 76px;
+
+  &::before {
+    background-image: url("/imges/cristian.png");
+  }
+}
+
+.director__item:hover .director__item-info {
+  bottom: 0;
+}
+
+.director__item-plus::after {
+  position: absolute;
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url("/imges/plus.png");
+  left: 145px;
+  bottom: -28px;
+  transition: all 0.6s ease;
+}
+
+.director__item-plus:hover::after {
+  transform: rotate(45deg);
+  background-image: url("/imges/back.png");
+}
+
+// .director__item-plus:hover
+// .director__item-info {
+//   bottom: 0;
+// }
+
+.director__item-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 29px;
+}
+
+.director__item-name {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: $rapture-blue;
+  margin-top: 144px;
+}
+
+.director__item-job {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: $main-white;
+  margin-bottom: 28px;
+}
+
+.director__item-info {
+  width: 350px;
+  bottom: -253px;
+  background-color: $dark-green;
+  position: absolute;
+  padding-bottom: 63px;
+  transition: all 0.8s ease;
+}
+
+.director__item-info-name {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: $rapture-blue;
+  padding-top: 35px;
+}
+
+.director__item-info-text {
+  width: 254px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: $main-white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.director__item-info-media-wrapper {
+  width: 64px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// RESPONSIVE
+
+@include breakpoint-down (1130px) {
+
+  .director__wrapper {
+    padding-top: 100px;
+  }
+
+  .director__title {
+    width: 445px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .director__list {
+    width: 100%;
+  }
+
+  .director__item {
+    margin-top: 48px;
+  }
+
+  .director__item~.director__item {
+    margin-left: 11px;
+  }
+
+  .director__item:nth-child(3) {
+    margin-top: 76px;
+    margin-left: 0;
+  }
+
+  .director__item:nth-child(4) {
+    margin-top: 76px;
+    margin-left: 11px;
+  }
+
+  .director__item:nth-child(5) {
+    margin-top: 76px;
+    margin-left: 0;
+  }
+
+  .director__item:nth-child(6) {
+    margin-top: 76px;
+  }
+
+  // .director__item {
+  //   width: 281px;
+
+  //   &::before {
+  //     top: 32px;
+  //     left: 92px;
+  //   }
+  // }
+
+  // .director__item-plus::after {
+  //   left: 113px;
+  // }
+
+  // .director__item-info {
+  //   width: 281px;
+  // }
+
+  // .director__item-info-text {
+  //   width: 233px;
+
+  // }
+
+
+
+}
+
+@include breakpoint-down (873px) {
+  .director__item {
+    width: 281px;
+
+    &::before {
+      top: 32px;
+      left: 92px;
+    }
+  }
+
+  .director__item-info-media-wrapper {
+    width: 64px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .director__item-plus::after {
+    left: 113px;
+  }
+
+  .director__item-info {
+    width: 281px;
+  }
+
+  .director__item-info-text {
+    width: 233px;
+
+  }
+
+}
+
+@include breakpoint-down (590px) {
+
+  .directors-section {
+    &::before {
+      top: -100px;
+    }
+  }
+
+  .director__title {
+    width: 300px;
+  }
+
+  .director__item:nth-child(even) {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,141 @@
+// HERO SECTION - PAGE ABOUT
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: $midnight-green;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    content: "";
+    background-image: url("/imges/responsive-oval.png");
+    right: -100px;
+    bottom: 0;
+  }
+
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.hero__title {
+  width: 350px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100px;
+  color: $main-white;
+  margin: 0;
+  margin-top: -25px;
+}
+
+.hero__right {
+  width: 730px;
+  margin-top: -40px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: $light-coral;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__right-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: $main-white;
+  margin: 0;
+}
+
+// responsive
+
+@include breakpoint-down (1245px) {
+  .hero__wrapper {
+    flex-direction: column;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .hero__title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__right {
+    width: 457px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .hero__right-text {
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+}
+
+@include breakpoint-down (655px) {
+
+  .hero-section{
+    &::before {
+      bottom: -100px;
+    }
+  }
+  
+  .hero__title {
+    width: 320px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__right {
+    width: 320px;
+  }
+
+  .hero__right-text {
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+}
+
+
+@include breakpoint-down (375px) {
+  .hero__title {
+    width: 300px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__right {
+    width: 300px;
+  }
+} 

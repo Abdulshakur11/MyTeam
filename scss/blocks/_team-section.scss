@@ -114,23 +114,25 @@
     right: -100px;
   }
 
-  .team__wrapper {
-    flex-direction: column;
-  }
-
-  .team__left-line {
-    margin-left: -35px;
-  }
-
-  .team__left-title {
-    width: 445px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 32px;
-    color: #FFFFFF;
-    margin-bottom: 64px;
-    margin-left: -35px;
+  @include breakpoint-down (1250px) {
+    .team__wrapper {
+      flex-direction: column;
+    }
+  
+    .team__left-line {
+      margin-left: -35px;
+    }
+  
+    .team__left-title {
+      width: 445px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 32px;
+      color: #FFFFFF;
+      margin-bottom: 64px;
+      margin-left: -35px;
+    }
   }
 
 @include breakpoint-down (576px) {
